@@ -955,4 +955,31 @@ tbody tr:hover {
         grid-template-columns: 1fr !important;
         gap: 20px !important;
     }
+    /* ... (tus otros códigos de celular aquí) ... */
+
+    /* Solo para celular: Fondo blanco a los contenedores de imagen */
+    .banner-img, 
+    .banner-img2, 
+    .banner-imgreglas, 
+    .banner-imgidentidad, 
+    .banner-imgconclusion, 
+    .header-img {
+        background-color: white !important;
+        padding: 10px !important;
+        border-radius: 10px !important;
+        margin: 20px auto !important;
+        display: block !important;
+        width: fit-content !important; /* Para que el cuadro no sea más ancho que la foto */
+    }
+
+    .banner-img img, 
+    .banner-img2 img, 
+    .banner-imgreglas img, 
+    .banner-imgidentidad img, 
+    .banner-imgconclusion img, 
+    .header-img img {
+        margin: 0 !important;
+        max-width: 280px !important; /* Un poco más pequeña para que quepa el marco */
+    }
 }
+
