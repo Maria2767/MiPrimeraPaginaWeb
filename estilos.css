@@ -1854,9 +1854,9 @@ tbody tr:hover {
     font-size: 20px;
 }
 
-/* --- FORZADO PARA CELULAR --- */
+
 @media (max-width: 768px) {
-    /* 1. Resetear contenedores que se salen */
+ 
     .banner, .logografia, .caracteristica, .reglas, .identidad, 
     .proposito, .conclusion, .formacion, .mi-header, .contenedor, .tiempo .contenedor {
         display: flex !important;
@@ -1868,7 +1868,6 @@ tbody tr:hover {
         text-align: center !important;
     }
 
-    /* 2. Arreglar los textos (Quitar el width de 50% y márgenes de 100px) */
     .banner-texto, .banner-texto2, .bannertexto3, .banner-textoreglas, 
     .banner-textoidentidad, .bannertextoproposito, .banner-textoconclusion, 
     .info, .banner-textoformacion {
@@ -1877,29 +1876,27 @@ tbody tr:hover {
         padding: 10px !important;
     }
 
-    /* 3. ARREGLO DE IMÁGENES (Lo más importante) */
     .banner-img, .banner-img2, .bannerimg3, .banner-imgreglas, 
     .banner-imgidentidad, .bannerimgproposito, .banner-imgconclusion, 
     .banner-imgformacion, .header-img {
-        width: 100% !important;
+        width: 80% !important;
         margin: 20px 0 !important;
-        background-color: white !important; /* El fondo blanco para que resalten */
+        background-color: white !important; 
         padding: 10px !important;
         border-radius: 15px !important;
         display: block !important;
     }
 
-    /* Esto quita los 500px y 600px que tenías arriba */
     .banner-img img, .banner-img2 img, .bannerimg3 img, .banner-imgreglas img, 
     .banner-imgidentidad img, .bannerimgproposito img, .banner-imgconclusion img, 
     .banner-imgformacion img, .header-img img {
-        width: 100% !important; 
-        max-width: 300px !important; /* Tamaño móvil */
-        height: auto !important;     /* Evita que se estiren */
-        margin: 0 auto !important;
+        width: 90%! important; 
+        max-width: 90px! important; 
+        height: auto ! important;    
+        margin: 0 auto! important;
     }
 
-    /* 4. Tablas y Grillas */
+
     table {
         display: block !important;
         width: 100% !important;
