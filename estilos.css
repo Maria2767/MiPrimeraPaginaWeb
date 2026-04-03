@@ -1853,114 +1853,68 @@ tbody tr:hover {
     margin-top: 15px;
     font-size: 20px;
 }
-}
-/* ============================================================
-   ADAPTACIÓN PARA CELULARES (RESPONSIVE)
-   ============================================================ */
 
+/* --- FORZADO PARA CELULAR --- */
 @media (max-width: 768px) {
-    /* 1. Ajuste General de Secciones */
+    /* 1. Resetear contenedores que se salen */
     .banner, .logografia, .caracteristica, .reglas, .identidad, 
-    .proposito, .conclusion, .formacion, .mi-header, .seccionfodafinal {
+    .proposito, .conclusion, .formacion, .mi-header, .contenedor, .tiempo .contenedor {
+        display: flex !important;
         flex-direction: column !important;
-        padding: 40px 20px !important; /* Adiós a los 100px de padding */
+        padding: 20px !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+        margin: 0 !important;
         text-align: center !important;
-        align-items: center !important;
     }
 
-    /* 2. Textos al 100% de ancho */
+    /* 2. Arreglar los textos (Quitar el width de 50% y márgenes de 100px) */
     .banner-texto, .banner-texto2, .bannertexto3, .banner-textoreglas, 
     .banner-textoidentidad, .bannertextoproposito, .banner-textoconclusion, 
-    .info, .banner-textoformacion, .fodacuerpolista {
+    .info, .banner-textoformacion {
         width: 100% !important;
-        margin: 0 0 20px 0 !important;
+        margin: 0 !important;
         padding: 10px !important;
     }
 
-    /* 3. El truco de las Imágenes con Fondo Blanco */
+    /* 3. ARREGLO DE IMÁGENES (Lo más importante) */
     .banner-img, .banner-img2, .bannerimg3, .banner-imgreglas, 
     .banner-imgidentidad, .bannerimgproposito, .banner-imgconclusion, 
     .banner-imgformacion, .header-img {
-        background-color: white !important; /* Para que resalten sobre el café */
+        width: 100% !important;
+        margin: 20px 0 !important;
+        background-color: white !important; /* El fondo blanco para que resalten */
         padding: 10px !important;
         border-radius: 15px !important;
-        box-shadow: 0 5px 15px rgba(0,0,0,0.2) !important;
-        display: inline-block !important;
-        width: fit-content !important;
-        margin: 0 auto 30px auto !important;
+        display: block !important;
     }
 
+    /* Esto quita los 500px y 600px que tenías arriba */
     .banner-img img, .banner-img2 img, .bannerimg3 img, .banner-imgreglas img, 
     .banner-imgidentidad img, .bannerimgproposito img, .banner-imgconclusion img, 
     .banner-imgformacion img, .header-img img {
+        width: 100% !important; 
+        max-width: 300px !important; /* Tamaño móvil */
+        height: auto !important;     /* Evita que se estiren */
+        margin: 0 auto !important;
+    }
+
+    /* 4. Tablas y Grillas */
+    table {
+        display: block !important;
         width: 100% !important;
-        max-width: 280px !important; /* Tamaño ideal para pantalla de cel */
-        height: auto !important;
-        margin: 0 !important;
+        overflow-x: auto !important;
     }
-
-    /* 4. Menú Desplegable */
-    .menu {
-        height: auto;
-        padding: 10px;
-    }
-
-    /* 5. Secciones Especiales (FODA y SMART) */
-    .fodafila {
-        flex-direction: column !important;
-        padding: 20px !important;
-        border-left-width: 15px !important; /* Más delgado para cel */
-    }
-
-    .fodaimagenpeque {
-        width: 100% !important;
-        max-width: 250px;
-        height: auto !important;
-        margin: 20px 0 0 0 !important;
+    
+    .galeria {
+        grid-template-columns: repeat(2, 1fr) !important;
     }
 
     .smartrow {
         flex-direction: column !important;
-        gap: 15px !important;
     }
-
-    .smartcircle {
-        width: 100px !important;
-        height: 100px !important;
-        font-size: 40px !important;
-    }
-
+    
     .smartbox {
         padding: 15px !important;
     }
-
-    /* 6. Línea de Tiempo y Favoritos */
-    .tiempo .contenedor, .contenedor-tarjetas {
-        flex-direction: column !important;
-        align-items: center !important;
-    }
-
-    .tiempo .bloque, .tarjeta-fav {
-        width: 100% !important;
-        max-width: 350px !important;
-    }
-
-    /* 7. Tablas (Scroll lateral para que no se rompa) */
-    table {
-        display: block !important;
-        overflow-x: auto !important;
-        white-space: nowrap !important;
-        font-size: 14px !important;
-    }
-
-    /* 8. Galería de Gustos */
-    .galeria {
-        grid-template-columns: repeat(2, 1fr) !important; /* 2 fotos por fila */
-        width: 100% !important;
-    }
-
-    .cards {
-        grid-template-columns: 1fr !important; /* Botones uno bajo el otro */
-    }
 }
-
